@@ -19,9 +19,8 @@ pipeline {
             }
         }
         stage('Deliver') {
-            steps {
-                sh 'sudo su'
-                sh './jenkins/scripts/deliver.sh'
+            steps {              
+                sh 'jenkins ALL=NOPASSWD: ./jenkins/scripts/deliver.sh'
             }
         }
     }
