@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'sudo chmod -R 777 ./jenkins/scripts/deliver.sh'
+                sh 'sudo -S ./jenkins/scripts/deliver.sh'
             }
         }
     }
